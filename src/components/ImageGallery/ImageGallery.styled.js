@@ -10,4 +10,4 @@ margin-bottom: 0;
 padding: 0;
 list-style: none;
 margin-left: auto;
-margin-right: auto;`
+margin-right: auto` ;
