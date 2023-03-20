@@ -14,7 +14,8 @@ export const SearchBar = styled.header`
   padding-top: 12px;
   padding-bottom: 12px;
   color: #fff;
-  background-color: #3f51b5;
+  background-color: #5f9ea0;
+  
   box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
     0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
 `;
@@ -24,6 +25,8 @@ export const SearchForm = styled.form`
   align-items: center;
   width: 100%;
   max-width: 600px;
+  border: solid 3px black;
+  
   background-color: #fff;
   border-radius: 3px;
   overflow: hidden;
@@ -46,7 +49,7 @@ export const SearchInput = styled.input`
   width: 100%;
   font: inherit;
   font-size: 20px;
-  border: none;
+  border:none;
   outline: none;
   padding-left: 4px;
   padding-right: 4px;
