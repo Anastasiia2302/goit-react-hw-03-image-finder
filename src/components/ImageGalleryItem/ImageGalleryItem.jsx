@@ -17,8 +17,8 @@ export class ImageGalleryItem extends Component {
     const { toggleModal } = this;
 
     return (
-      <li className='image-item'>
-        <img className='image'
+      <li >
+        <img 
           src={webformatURL}
           alt={tags}
           width="500"

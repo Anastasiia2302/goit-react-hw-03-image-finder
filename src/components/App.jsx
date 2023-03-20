@@ -6,7 +6,7 @@ import { Loader } from './Loader/Loader';
 import { ImageGallery } from './ImageGallery/ImageGallery';
 import { Button } from './Button/Button';
 
-export default class App extends Component() {
+export default class App extends Component {
   state = {
     search: '',
     images: [],

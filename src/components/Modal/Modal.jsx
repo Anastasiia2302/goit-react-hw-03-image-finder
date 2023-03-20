@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import { createPortal } from 'react-dom';
-import { Overlay, ModalBox, Image } from './Modal.styled';
+import { Overlay, ModalBlock, ModalImg } from './Modal.styled';
 
 const modalRoot = document.getElementById('modal');
 
@@ -12,8 +12,8 @@ export class Modal extends Component {
     window.removeEventListener('keydown', this.closeModal);
   }
 
-  closeModal = (elem) => {
-    if (elem.code === 'Escape' || elem.currenTarget !== elem.target) {
+  closeModal = element => {
+    if (element.code === 'Escape' || element.currenTarget !== element.target) {
       this.props.closeModal();
       return;
     }
@@ -24,9 +24,9 @@ export class Modal extends Component {
 
     return createPortal(
       <Overlay onClick={this.closeModal}>
-        <ModalBox>
-          <Image src={modalImg} alt={tags} />
-        </ModalBox>
+        <ModalBlock>
+          <ModalImg src={modalImg} alt={tags} />
+        </ModalBlock>
       </Overlay>,
       modalRoot
     );

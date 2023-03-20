@@ -7,6 +7,7 @@ import {
   SearchButton,
   SearchInput,
 } from './Searchbar.styled';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 export class Searchbar extends Component {
@@ -44,7 +45,7 @@ export class Searchbar extends Component {
                onChange={handleSearch}
                type="text"
                autocomplete="off"
-               autofocus
+          
                placeholder="Search images and photos">
             
           </SearchInput>
