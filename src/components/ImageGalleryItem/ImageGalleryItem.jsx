@@ -1,6 +1,6 @@
 import { Modal } from 'components/Modal/Modal';
 import { Component } from 'react';
-import { GalleryItem, Image } from './ImageGalleryItem.styled';
+// import { LI, IMG } from './ImageGalleryItem.styled';
 
 export class ImageGalleryItem extends Component {
   state = {
@@ -17,8 +17,8 @@ export class ImageGalleryItem extends Component {
     const { toggleModal } = this;
 
     return (
-      <GalleryItem>
-        <Image
+      <li className='image-item'>
+        <img className='image'
           src={webformatURL}
           alt={tags}
           width="500"
@@ -34,7 +34,7 @@ export class ImageGalleryItem extends Component {
             closeModal={toggleModal}
           />
         )}
-      </GalleryItem>
+      </li>
     );
   }
 }
