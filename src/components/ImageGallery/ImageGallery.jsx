@@ -1,9 +1,9 @@
-import { Gallery } from './ImageGallery.styled';
+// import { gallery } from './ImageGallery.styled';
 import { ImageGalleryItem } from '../ImageGalleryItem/ImageGalleryItem';
 
 
 export const ImageGallery = ({ images }) => (
-  <Gallery>
+  <ul className='gallery'>
     {images.map(({ id, webformatURL, largeImageURL, tags }) => (
       <ImageGalleryItem
         key={id}
@@ -11,5 +11,5 @@ export const ImageGallery = ({ images }) => (
         largeImageURL={largeImageURL}
         tags={tags} />
     ))}
-  </Gallery>
+  </ul>
 );
