@@ -21,7 +21,7 @@ export class ImageGalleryItem extends Component {
         <img 
           src={webformatURL}
           alt={tags}
-          width="500"
+          width="430"
           height="210"
           loading="lazy"
           onClick={toggleModal}
