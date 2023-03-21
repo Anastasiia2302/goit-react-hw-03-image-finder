@@ -13,6 +13,7 @@ export default class App extends Component {
     page: 1,
     totalHits: 0,
     isLoading: false,
+    showBtn: false,
   };
 
   componentDidUpdate(prevProps, prevState) {
@@ -27,7 +28,7 @@ export default class App extends Component {
         }
         this.setState({
           images: [...images, ...response.hits],
-          totalHits: response.totalHits,
+          showBtn: this.state.page < Math.ceil(response.totalHits / 12),
           isLoading: false,
         });
       });
@@ -48,7 +49,7 @@ export default class App extends Component {
   };
 
   render() {
-    const { images, totalHits, isLoading } = this.state;
+    const { images, isLoading, showBtn } = this.state;
     const { handleSearch, handleLoadMore } = this;
 
     return (
@@ -56,12 +57,8 @@ export default class App extends Component {
         <Searchbar onSubmit={handleSearch} />
         {isLoading && <Loader />}
         {images && <ImageGallery images={images} />}
-        {totalHits > 12 && (
-          <>
-            <Button onLoadMore={handleLoadMore} />
-            <ToastContainer />
-          </>
-        )}
+        {showBtn && <Button onLoadMore={handleLoadMore} />}
+        <ToastContainer />
       </>
     );
   }
